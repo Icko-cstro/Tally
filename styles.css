@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+}
+
+header h1 {
+  margin: 0 0 10px;
+}
+
+/* Subject + Section in one line */
+.meta-line {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
+.meta-line label {
+  font-weight: bold;
+}
+
+/* Table layout */
+#table-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each column has 10 rows max visible in full screen */
+.table-header, .row {
+  display: grid;
+  grid-template-columns: 50px 100px 60px 60px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4px;
+  padding: 4px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Fit 10 rows + 1 header inside viewport height */
+.table-header {
+  font-weight: bold;
+  background: #ddd;
+  height: calc((100vh - 180px) / 11); /* header row */
+}
+
+.row {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  height: calc((100vh - 180px) / 11); /* each row fits evenly */
+}
+
+#table-container .row:hover {
+  background: #e6f7ff;
+  transform: scale(1.02);
+  z-index: 1;
+}
+
+/* Footer with total + controls in one line */
+.footer-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background: #fafafa;
+  border-top: 1px solid #ccc;
+}
+
+.btn {
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin: 0 3px;
+  border-radius: 6px;
+  min-width: 36px;
+  transition: transform 0.1s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+.btn.add { background: #4CAF50; }
+.btn.add:hover { background: #45a049; }
+.btn.minus { background: #f44336; }
+.btn.minus:hover { background: #e53935; }
+
+footer input,
+footer button {
+  margin-left: 4px;
+}
