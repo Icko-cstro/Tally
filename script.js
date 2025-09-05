@@ -51,8 +51,8 @@ function buildTable() {
     row.innerHTML = `
       <div>${i + 1}</div>
       <div class="count">${count}</div>
-      <button class="btn add">➕</button>
-      <button class="btn minus">➖</button>
+      <button class="btn add">✚</button>
+      <button class="btn minus">▬</button>
     `;
 
     row.querySelector(".add").addEventListener("click", () => {
