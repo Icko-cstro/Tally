@@ -71,6 +71,10 @@ header h1 {
   transition: all 0.2s ease;
   height: calc((100vh - 180px) / 11); /* each row fits evenly */
 }
+.number{
+  font-size: 1.2em;
+  font-weight:bolder !important;
+}
 
 #table-container .row:hover {
   background: #e6f7ff;
@@ -89,6 +93,7 @@ header h1 {
   background: #fafafa;
   border-top: 1px solid #ccc;
 }
+
 
 .btn {
   border: none;

@@ -49,7 +49,7 @@ function buildTable() {
     const row = document.createElement("div");
     row.className = "row";
     row.innerHTML = `
-      <div>${i + 1}</div>
+      <div class="number">${i + 1}</div>
       <div class="count">${count}</div>
       <button class="btn add">✚</button>
       <button class="btn minus">▬</button>
