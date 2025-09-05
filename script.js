@@ -13,8 +13,8 @@ let counts = JSON.parse(localStorage.getItem("counts")) || Array(rowCount).fill(
 rowsInput.value = rowCount;
 
 // Load subject & section
-subjectText.textContent = localStorage.getItem("subject") || "Math";
-sectionText.textContent = localStorage.getItem("section") || "A1";
+subjectText.textContent = localStorage.getItem("subject") || "Put here";
+sectionText.textContent = localStorage.getItem("section") || "Put here";
 
 // Save state
 function saveState() {
